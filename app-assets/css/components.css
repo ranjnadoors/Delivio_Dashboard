@@ -4,7 +4,7 @@ html {
   width: 100%; }
   html body {
     height: 100%;
-    background-color: #F4F5FA;
+    background-color: #fff;
     direction: ltr; }
     html body.fixed-navbar {
       padding-top: 5rem; }
@@ -254,7 +254,7 @@ footer.footer-dark {
       .main-menu.menu-light .navigation li a span.menu-sub-title {
         color: #6877bb; }
     .main-menu.menu-light .navigation li.hover > a, .main-menu.menu-light .navigation li.open > a, .main-menu.menu-light .navigation li.active > a {
-      color: #FFFFFF; }
+      color:#8BBD43 !important; }
     .main-menu.menu-light .navigation > li {
       padding: 0;
       line-height: 2.5rem; }
@@ -280,8 +280,8 @@ footer.footer-dark {
           width: 7px;
           height: 7px;
           border-radius: 50%;
-          background-color:  #8BBD43;;
-          border-color:  #8BBD43;;
+          background-color:  #8BBD43;
+          border-color:  #8BBD43;
           position: absolute;
           left: 75px;
           top: 50%;
@@ -353,8 +353,8 @@ footer.footer-dark {
               width: 7px;
               height: 7px;
               border-radius: 50%;
-              background-color: #fa626b;
-              border-color: #fa626b;
+              background-color:#8BBD43;
+              border-color: #8BBD43;
               position: absolute;
               left: 85px;
               top: 50%;

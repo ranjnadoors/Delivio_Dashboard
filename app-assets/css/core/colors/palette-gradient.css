@@ -1104,8 +1104,9 @@
 
 body.vertical-layout[data-color=bg-gradient-x-purple-blue] .navbar-container,
 body.vertical-layout[data-color=bg-gradient-x-purple-blue] .content-wrapper-before {
-  background: #FFFFFF;
-  box-shadow: 1px 0px 50px rgba(208, 200, 200, 0.25);
+ background: #FFFFFF;
+  /* box-shadow: 1px 0px 50px rgba(208, 200, 200, 0.25);*/
+ 
   }
 
 body.horizontal-layout[data-color=bg-gradient-x-purple-blue] .navbar-horizontal,
