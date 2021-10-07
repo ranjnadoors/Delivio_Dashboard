@@ -9,9 +9,9 @@ html {
     html body.fixed-navbar {
       padding-top: 5rem; }
     html body a {
-      color: #6967ce; }
+      color: #fff; }
       html body a:hover {
-        color: #4340c2; }
+        color: #ffff; }
     html body.blank-page .content-wrapper-before {
       height: 0 !important; }
     html body .content {
@@ -207,7 +207,7 @@ footer.footer-transparent {
   border: none; }
 
 footer.footer-light {
-  background: #FFFFFF; }
+  background: #000; }
 
 footer.footer-dark {
   background: #2C303B;
@@ -3709,3 +3709,10 @@ tr.shown td.details-control {
   border-width: 1px;
   border-radius: 2rem;
   padding: 0.5rem 1rem; }
+.domain-btn{
+  color: #fff;
+  background: #1087dd;
+  border-radius: 5px;
+  border: none;
+  text-transform: uppercase;
+}
