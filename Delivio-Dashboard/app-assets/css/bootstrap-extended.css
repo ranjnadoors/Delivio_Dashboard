@@ -253,12 +253,12 @@ form {
 overflow: hidden;
 } */ }
 form label {
-color: #3F69AA; }
+color: #999999; }
 form .form-group {
 margin-bottom: 1.5rem; }
 form .form-control {
 border: 1px solid #cacfe7;
-color: #3F69AA; }
+color: #999; }
 form .form-control::-webkit-input-placeholder {
 color: #aeb5da; }
 form .form-control:-moz-placeholder {
@@ -860,7 +860,7 @@ overflow: hidden; }
 padding: 17px 0px;
 margin-right: 0; }
 .navbar-header .navbar-brand .brand-logo {
-/*width: 36px;*/ }
+width: 36px; }
 .navbar-header .navbar-brand .brand-text {
 display: inline;
 padding-left: 6px;

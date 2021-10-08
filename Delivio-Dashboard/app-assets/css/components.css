@@ -283,7 +283,7 @@ footer.footer-dark {
           background-color:  #8BBD43;
           border-color:  #8BBD43;
           position: absolute;
-          left: 75px;
+          left: 45px;
           top: 50%;
           -webkit-transform: translate(-10px, -50%);
           -moz-transform: translate(-10px, -50%);
@@ -327,7 +327,7 @@ footer.footer-dark {
           color: #2b345f;
           background: transparent; }
           .main-menu.menu-light .navigation > li ul li > a {
-            padding: 10px 18px 10px 90px; }
+            padding: 10px 18px 10px 53px; }
         .main-menu.menu-light .navigation > li ul .has-sub:not(.open) > ul {
           display: none; }
         .main-menu.menu-light .navigation > li ul .open > a {
@@ -356,7 +356,7 @@ footer.footer-dark {
               background-color:#8BBD43;
               border-color: #8BBD43;
               position: absolute;
-              left: 85px;
+              left: 50px;
               top: 50%;
               -webkit-transform: translate(-10px, -50%);
               -moz-transform: translate(-10px, -50%);
@@ -3711,8 +3711,14 @@ tr.shown td.details-control {
   padding: 0.5rem 1rem; }
 .domain-btn{
   color: #fff;
-  background: #1087dd;
+  background: #3F69AA;
   border-radius: 5px;
   border: none;
   text-transform: uppercase;
+}
+.add-group-btn{
+  background: #E1E1E1;
+border-radius: 10px;
+border: transparent;
+width: 200px;
 }
