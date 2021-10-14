@@ -97,6 +97,11 @@ font-face{
     font-family:Poppins-medium-italic,AdobeInvisFont,MyriadPro-Regular ;
     color:#939598 ;
     }
+    select{
+        font-size: 16px;
+        font-family:Poppins-medium-italic,AdobeInvisFont,MyriadPro-Regular !important ;
+        color:#939598 ;
+    }
     .input-field:focus, textarea:focus, select:focus{
     outline: none;
     }
