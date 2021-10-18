@@ -3722,3 +3722,29 @@ border-radius: 10px;
 border: transparent;
 width: 200px;
 }
+#add-product-img .add-product-img-1:hover{
+  box-shadow: 0 2px 5px rgb(0 0 0 / 16%), 0 2px 10px rgb(0 0 0 / 12%);
+  border-radius: 10px;
+  outline:none;
+}
+.btn{
+  background: #3F69AA;
+  color: #fff;
+  border: none;
+}
+#add-product-input-field{
+  display: none;
+}
+#add-product-main{
+  display: none;
+}
+#add-marketplace img{
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+#home-kitchen-input-field{
+  display: none;
+}
+#hidden_div, #hidden_div1, #hidden_div2, #hidden_div3, #hidden_div4, #hidden_div5, #hidden_div6, #hidden_div7  {
+  display: none;
+}
