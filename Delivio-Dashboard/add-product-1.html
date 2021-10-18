@@ -787,7 +787,7 @@
                                                         <label for="experienceNo" class="col-4 col-form-label">Template
                                                             variations</label>
                                                         <div class="col-6">
-                                                            <select id="test" name="form_select">
+                                                            <select id="select_item" name="form_select">
                                                                 <option value="0">-Select-</option>
                                                                 <option value="1">Color</option>
                                                                 <option value="2">Size</option>
@@ -808,7 +808,8 @@
                                                         
                                                                 <div id="hidden_div1" class="my-3"><input type="text"
                                                                 class="form-control" id="proposalTitle3"
-                                                                placeholder="Eg.2T, 6X, 12, Small, X-Large" value="2"></div>
+                                                                placeholder="Eg.2T, 6X, 12, Small, X-Large" value="2">
+                                                            </div>
 
                                                         <div id="hidden_div2" class="my-3">
                                                             <input type="text" class="form-control" id="proposalTitle4"
@@ -1139,7 +1140,7 @@
     </script>
 
     <script>
-       document.getElementById('test').addEventListener('change', function () {
+       document.getElementById('select_item').addEventListener('change', function () {
     var style = this.value == 1 ? 'block' : 'none';
     document.getElementById('hidden_div').style.display = style;
     var style1 = this.value == 2 ? 'block' : 'none';

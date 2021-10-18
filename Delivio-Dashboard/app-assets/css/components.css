@@ -3742,9 +3742,7 @@ width: 200px;
   border: 1px solid gray;
   border-radius: 5px;
 }
-#home-kitchen-input-field{
-  display: none;
-}
+
 #hidden_div, #hidden_div1, #hidden_div2, #hidden_div3, #hidden_div4, #hidden_div5, #hidden_div6, #hidden_div7  {
   display: none;
 }
