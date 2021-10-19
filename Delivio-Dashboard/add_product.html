@@ -679,19 +679,19 @@
                                         </h3>
                                     </div>
                                     <div class="row  justify-content-center" id="add-product-img">
-                                        <div class=" text-center col-md-6">
-                                            <img src="./app-assets/images/gallery/without-variation-100.jpg"
+                                        <div class="  text-lg-left text-center col-lg-3 col-md-6">
+                                            <img src="./app-assets/images/gallery/withoutvariation-100.jpg"
                                                 class="img-fluid add-product-img-1 zoomin" alt="">
-                                            <h3 class="my-2">Without Variations</h3>
+                                            <h3 class="my-2 text-center">Without Variations</h3>
                                         </div>
                                       
-                                        <div class="text-center col-md-6 mt-md-0 mt-3" id="open-add-product-field" onclick="myFunction()">
-                                            <img src="./app-assets/images/gallery/withvariation-square-100.jpg"
+                                        <div class=" text-lg-left text-center col-lg-3 col-md-6 mt-md-0 mt-3" id="open-add-product-field" onclick="myFunction()">
+                                            <img src="./app-assets/images/gallery/withvariation-100.jpg"
                                                 class="img-fluid add-product-img-1 zoomin" alt="">
-                                            <h3 class="my-2">With Variations</h3>
+                                            <h3 class="my-2 text-center">With Variations</h3>
                                         </div>
                                     </div>
-                                    <div class="row justify-content-center">
+                                    <div class="row justify-content-center mt-2">
                                     <div class="form-group  w-50" id="add-product-input-field" style="display: none;">
                                         <label for="location2" style="font-weight:bold;">Parent Category</label>
                                         <select class="custom-select form-control" id="select_item" name="location">
@@ -721,8 +721,38 @@
                                     </div>
                                 </div>
                                     <div class="row justify-content-center my-md-4 my-3" id="add-btn">
-                                        <a href="add-product-1.html"><button class="btn">Ok</button></a>
-                                        <a href=""><button class="btn mx-4">Cancel</button></a>
+                                        <a href="add-product-1.html"><button class="btn btn-info btn-min-width box-shadow-3 mr-1 mb-1" data-toggle="modal" data-keyboard="false" data-target="#keyboard1">Ok</button></a>
+                                        
+                                        
+                                            <div class="form-group">
+                                               
+                                                <!-- Button trigger modal -->
+                                                <button type="button" class="btn btn-info btn-min-width box-shadow-3 mr-1 mb-1" data-toggle="modal" data-keyboard="false" data-target="#keyboard1">
+                                                    Cancel
+                                                </button>
+
+                                                <!-- Modal -->
+                                                <div class="modal fade text-left" id="keyboard1" tabindex="-1" role="dialog" aria-labelledby="basicModalLabel3" aria-hidden="true">
+                                                    <div class="modal-dialog modal-dialog-centered" role="document">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h4 class="modal-title" id="basicModalLabel3">Basic Modal</h4>
+                                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                    <span aria-hidden="true">&times;</span>
+                                                                </button>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn grey btn-secondary" data-dismiss="modal">Close</button>
+                                                                <button type="button" class="btn btn-danger">Save</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                       
 
                                     </div>
                                     <a class="heading-elements-toggle"><i
@@ -1157,6 +1187,10 @@
     <script src="app-assets/vendors/js/editors/ckeditor/ckeditor.js" type="text/javascript"></script>
     <!-- END: Page JS-->
     <script src="app-assets/js/scripts/editors/editor-ckeditor.js" type="text/javascript"></script>
+     <!-- BEGIN: Page JS-->
+     <script src="app-assets/js/scripts/forms/select/form-select2.js" type="text/javascript"></script>
+     <script src="app-assets/js/scripts/modal/components-modal.js" type="text/javascript"></script>
+     <!-- END: Page JS-->
     <script>
         Dropzone.autoDiscover = false;
         jQuery(document).ready(function () {
