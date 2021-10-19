@@ -3737,12 +3737,26 @@ width: 200px;
   border: none;
   
 }
-.btn{
+#template-variation .btn{
   background: #3F69AA;
   color: #fff;
   border: none;
-  
-}
+  }
+  #template-variation .btn:hover{
+    background-color: transparent;
+    border: 1px solid #3F69AA;
+    color: #3F69AA;
+  }
+  #template-variation .btn_1{
+    background:#8BBD43;
+    color: #fff;
+    border: none;
+    }
+    #template-variation .btn_1:hover{
+      background-color: transparent;
+      border: 1px solid #8BBD43;;
+      color: #8BBD43;;
+    }
 #add-btn .btn:hover{
   background: transparent;
   color: #3F69AA;
