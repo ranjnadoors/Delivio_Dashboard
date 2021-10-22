@@ -449,7 +449,7 @@
                         </li>
                     </ul>
                 </li>
-                <li class=" nav-item"><a href="#"><i class="ft-monitor"></i><span class="menu-title"
+                <li class=" nav-item"><a href="#"><img src="./app-assets/images/gallery/inventory.png" class="img-fluid" style="margin-right: 20px;"><span class="menu-title"
                             data-i18n="">Inventory</span></a>
 
                     <ul class="menu-content">
@@ -469,8 +469,7 @@
                 </li>
 
 
-                <li class=" nav-item"><a href="#"><i class="ft-layout"></i><span class="menu-title"
-                            data-i18n="">Orders</span><span
+                <li class=" nav-item"><a href="#"><img src="./app-assets/images/gallery/orders.png" class="img-fluid" style="margin-right: 20px;">Orders</span><span
                             class="badge badge badge-pill badge-danger float-right mr-2">5</span></a>
                     <ul class="menu-content">
                         <li><a class="menu-item" href="">Create Case Packed Outbound Package</a>
@@ -489,7 +488,7 @@
                         </li>
                     </ul>
                 </li>
-                <li class=" nav-item"><a href="#"><i class="ft-zap"></i><span class="menu-title"
+                <li class=" nav-item"><a href="#"><img src="./app-assets/images/gallery/marketplace.png" class="img-fluid" style="margin-right: 20px;"><span class="menu-title"
                             data-i18n="">Marketplace</span></a>
 
                     <ul class="menu-content">
@@ -502,7 +501,7 @@
                 </li>
 
 
-                <li class=" nav-item"><a href="#"><i class="ft-aperture"></i><span class="menu-title"
+                <li class=" nav-item"><a href="#"><img src="./app-assets/images/gallery/shipping.png" class="img-fluid" style="margin-right: 20px;"><span class="menu-title"
                             data-i18n="">Shipping</span></a>
                     <ul class="menu-content">
 
@@ -518,7 +517,7 @@
                     </ul>
                 </li>
 
-                <li class=" nav-item"><a href="#"><i class="ft-box"></i><span class="menu-title" data-i18n="">Store
+                <li class=" nav-item"><a href="#"><img src="./app-assets/images/gallery/settings.png" class="img-fluid" style="margin-right: 20px;"><span class="menu-title" data-i18n="">Store
                             Settings</span></a>
                     <ul class="menu-content">
                         <li><a class="menu-item" href="add_domain.html">Add Domain</a>
@@ -626,7 +625,7 @@
                                             </fieldset>
 
                                             <!-- Step 2 -->
-                                            <h6><i class="step-icon ft-file-text"></i>Keyword</h6>
+                                            <h6><i class="step-icon ft-feather"></i>Keyword</h6>
                                             <fieldset>
                                                 <div class="row">
                                                     <div class="col-12 my-4">
@@ -641,7 +640,7 @@
                                             </fieldset>
 
                                             <!-- Step 3 -->
-                                            <h6><i class="step-icon ft-activity"></i>Variation</h6>
+                                            <h6><i class="step-icon ft-cpu"></i>Variation</h6>
                                             <fieldset>
                                                 <div class="row" id="template-variation">
                                                     <div class="col-12 my-4">
@@ -1014,7 +1013,7 @@
                                             </fieldset>
 
                                             <!-- Step 4 -->
-                                            <h6><i class="step-icon ft-box"></i>Description</h6>
+                                            <h6><i class="step-icon ft-file-text"></i>Description</h6>
 
                                             <fieldset>
                                                 <textarea name="ckeditor" id="ckeditor"></textarea>
@@ -1053,7 +1052,7 @@
                                                 </div>
                                             </fieldset>
                                             <!-- Step 5 -->
-                                            <h6><i class="step-icon ft-activity"></i>Data</h6>
+                                            <h6><i class="step-icon ft-package"></i>Data</h6>
                                             <fieldset>
                                                 <div class="row">
                                                     <div class="col-12 ">
@@ -1065,18 +1064,26 @@
                                                 </div>
                                                 <div class="row">
                                                     <div class="col-12">
-                                                        <div class="form-group col-lg-4 col-md-6 col-12 "> <label
-                                                                for="proposalTitle2">Minimum
-                                                                Quantity</label>
-                                                            <input type="text" class="form-control "
-                                                                id="proposalTitle2">
+                                                        <div class="form-group col-lg-4 col-md-6 col-12 "> 
+                                                                <div class="form-group">
+                                                                    <label
+                                                                    for="proposalTitle2">Minimum
+                                                                    Quantity</label>
+                                                                    <select class="custom-select form-control" id="location2"
+                                                                        name="location">
+                                                                        <option value="">1</option>
+                                                                        <option value="Amsterdam">2</option>
+                                                                        <option value="Berlin">3</option>
+                                                                        <option value="Frankfurt">4</option>
+                                                                    </select>
+                                                                </div>
                                                         </div>
                                                     </div>
                                                 </div>
 
                                             </fieldset>
                                             <!-- Step 6 -->
-                                            <h6><i class="step-icon ft-activity"></i>Dimensions</h6>
+                                            <h6><i class="step-icon ft-codepen"></i>Dimensions</h6>
                                             <fieldset>
                                                 <div class="form-group row ">
                                                     <div class="col-12">
@@ -1202,14 +1209,20 @@
                                                         <div class="form-group ">
                                                             <label for="proposalTitle2">Shipping Price Type
                                                             </label>
-                                                            <input type="text" class="form-control" id="proposalTitle2">
+                                                            <select class="custom-select form-control" id="location2"
+                                                                name="location">
+                                                                <option value="">select shipping price type</option>
+                                                                <option value="Amsterdam">Flat</option>
+                                                                <option value="Berlin">Percentage</option>
+                                                               
+                                                            </select>
                                                         </div>
 
                                                     </div>
                                                 </div>
                                             </fieldset>
                                             <!-- Step 7 -->
-                                            <h6><i class="step-icon ft-activity"></i>Gallery</h6>
+                                            <h6><i class="step-icon ft-image"></i>Gallery</h6>
 
                                             <fieldset>
 

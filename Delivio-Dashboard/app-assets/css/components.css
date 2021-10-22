@@ -244,7 +244,7 @@ padding: 30px 20px 8px 20px; }
 .main-menu.menu-light .navigation .navigation-header span {
 font-weight: 500; }
 .main-menu.menu-light .navigation li a {
-color: #2b345f;
+color: darkgray;
 -webkit-transition: all 0.2s ease;
 -o-transition: all 0.2s ease;
 -moz-transition: all 0.2s ease;
@@ -255,6 +255,9 @@ display: inline-block; }
 color: #6877bb; }
 .main-menu.menu-light .navigation li.hover > a, .main-menu.menu-light .navigation li.open > a, .main-menu.menu-light .navigation li.active > a {
 color:#8BBD43 !important; }
+.main-menu.menu-light .navigation li.hover > a, .main-menu.menu-light .navigation li.open > a, .main-menu.menu-light .navigation li.active > img {
+  color:#8BBD43 !important; }
+
 .main-menu.menu-light .navigation > li {
 padding: 0;
 line-height: 2.5rem; }
@@ -298,7 +301,8 @@ transition: all 0.2s ease; }
 .main-menu.menu-light .navigation > li:not(.open) > ul {
 display: none; }
 .main-menu.menu-light .navigation > li.hover > a, .main-menu.menu-light .navigation > li:hover > a, .main-menu.menu-light .navigation > li.active > a > img{
-color:  #8BBD43;; }
+color:  #8BBD43 !important;
+margin-right: 20px; }
 .main-menu.menu-light .navigation > li.hover > a > span, .main-menu.menu-light .navigation > li:hover > a > span, .main-menu.menu-light .navigation > li.active > a > span {
 -webkit-transform: translateX(4px);
 -moz-transform: translateX(4px);
