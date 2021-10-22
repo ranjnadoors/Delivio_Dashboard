@@ -175,8 +175,8 @@ body.vertical-layout.vertical-menu.menu-collapsed .main-menu {
     color: #fff;
     text-transform: uppercase;
     text-align: left;
-    background-color: #fa626b;
-    border-color: #fa626b;
+    background-color: #8BBD43;
+    border-color: #8BBD43;
     padding: 18px 30px; }
   body.vertical-layout.vertical-menu.menu-collapsed .main-menu .main-menu-content > ul.menu-content {
     left: 60px;
@@ -263,7 +263,7 @@ body.vertical-layout.vertical-menu.menu-collapsed .main-menu {
         padding: 14px 20px; }
       body.vertical-layout.vertical-menu.menu-collapsed .main-menu .navigation > li > a > i {
         margin-right: 0;
-        font-size: 1.5rem;
+        font-size: 1.3rem;
         line-height: 1;
         visibility: visible;
         opacity: 1; }
