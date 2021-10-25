@@ -200,7 +200,7 @@ body.vertical-layout.vertical-menu.menu-collapsed .main-menu {
         -moz-transition: all 0.2s ease;
         transition: all 0.2s ease; }
       body.vertical-layout.vertical-menu.menu-collapsed .main-menu .main-menu-content > ul.menu-content li.active a {
-        color: #fa626b; }
+        color: #8BBD43; }
       body.vertical-layout.vertical-menu.menu-collapsed .main-menu .main-menu-content > ul.menu-content li.has-sub > a:not(.mm-next):after {
         content: "\f112";
         font-family: 'LineAwesome';

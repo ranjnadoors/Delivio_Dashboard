@@ -244,7 +244,7 @@ padding: 30px 20px 8px 20px; }
 .main-menu.menu-light .navigation .navigation-header span {
 font-weight: 500; }
 .main-menu.menu-light .navigation li a {
-color: darkgray;
+color: #2b345f;
 -webkit-transition: all 0.2s ease;
 -o-transition: all 0.2s ease;
 -moz-transition: all 0.2s ease;
@@ -270,7 +270,7 @@ margin-right: 5px; }
 position: relative; }
 .main-menu.menu-light .navigation > li.open > a {
 color: #2b345f;
-color: #8C8888; }
+color: #2b345f; }
 .main-menu.menu-light .navigation > li.open .hover > a {
 -webkit-transform: translateX(-4px);
 -moz-transform: translateX(-4px);
