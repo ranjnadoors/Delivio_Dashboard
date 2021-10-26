@@ -23,8 +23,10 @@
 
     <!-- BEGIN: Vendor CSS-->
     <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/vendors.min.css">
-    <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/charts/chartist.css">
-    <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/charts/chartist-plugin-tooltip.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/tables/datatable/datatables.min.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/dataTables.bootstrap4.min.css">
     <!-- END: Vendor CSS-->
 
     <!-- BEGIN: Theme CSS-->
@@ -37,9 +39,6 @@
     <!-- BEGIN: Page CSS-->
     <link rel="stylesheet" type="text/css" href="app-assets/css/core/menu/menu-types/vertical-menu.css">
     <link rel="stylesheet" type="text/css" href="app-assets/css/core/colors/palette-gradient.css">
-    <link rel="stylesheet" type="text/css" href="app-assets/css/core/colors/palette-gradient.css">
-    <link rel="stylesheet" type="text/css" href="app-assets/css/pages/chat-application.css">
-    <link rel="stylesheet" type="text/css" href="app-assets/css/pages/dashboard-analytics.css">
     <!-- END: Page CSS-->
 
     <!-- BEGIN: Custom CSS-->
@@ -49,8 +48,11 @@
 </head>
 <!-- END: Head-->
 
+<!-- BEGIN: Body-->
+
 <body class="vertical-layout vertical-menu 2-columns   fixed-navbar" data-open="click" data-menu="vertical-menu"
     data-color="bg-gradient-x-purple-blue" data-col="2-columns">
+
     <!-- BEGIN: Header-->
     <nav
         class="header-navbar navbar-expand-md navbar navbar-with-menu navbar-without-dd-arrow fixed-top navbar-semi-light">
@@ -64,9 +66,9 @@
                         <li class="nav-item d-none d-md-block"><a class="nav-link nav-menu-main menu-toggle hidden-xs"
                                 href="#"><i class="ft-menu"></i></a></li>
                         <!--li class="nav-item d-none d-md-block"><a class="nav-link nav-link-expand" href="#">
-                            <i class="ficon ft-maximize"></i></a></li-->
+                        <i class="ficon ft-maximize"></i></a></li-->
                         <!--li class="dropdown nav-item mega-dropdown d-none d-md-block">
-                            <a class="dropdown-toggle nav-link" href="#" data-toggle="dropdown">Mega</a-->
+                        <a class="dropdown-toggle nav-link" href="#" data-toggle="dropdown">Mega</a-->
                         <ul class="mega-dropdown-menu dropdown-menu row">
                             <li class="col-md-2">
                                 <h6 class="dropdown-menu-header text-uppercase mb-1"><i class="ft-link"></i> Quick Links
@@ -181,7 +183,7 @@
                         </li>
                         <li class="dropdown d-none d-md-block mr-1">
                             <!--a class="dropdown-toggle nav-link" id="apps-navbar-links" href="#" data-toggle="dropdown">
-                                Apps</a-->
+                            Apps</a-->
                             <div class="dropdown-menu">
                                 <div class="arrow_box"><a class="dropdown-item" href="email-application.html"><i
                                             class="ft-user"></i> Email</a><a class="dropdown-item"
@@ -197,8 +199,8 @@
 
                         <li class="nav-item dropdown navbar-search col-md-5 col-4 text-right"><a
                                 class="nav-link dropdown-toggle hide" data-toggle="dropdown" href="#" style="background: gray;
-                            height: 30px;border: 1px solid #F9F9F9;box-sizing: border-box;margin-top: 23px;padding: 5px 10px;background: #F9F9F9;
-                            border-radius: 17.5px;"><i class="ficon ft-search" style="font-size: 15px;"></i></a>
+                        height: 30px;border: 1px solid #F9F9F9;box-sizing: border-box;border-radius: 17.5px;margin-top: 23px; padding: 5px 10px;
+                        background: #F9F9F9;"><i class="ficon ft-search" style="font-size: 15px;"></i></a>
                             <ul class="dropdown-menu">
                                 <li class="arrow_box">
                                     <form>
@@ -393,6 +395,8 @@
         </div>
     </nav>
     <!-- END: Header-->
+
+
     <!-- BEGIN: Main Menu-->
     <div class="main-menu menu-fixed menu-light menu-accordion    menu-shadow " data-scroll-to-active="true"
         data-img="app-assets/images/backgrounds/02.jpg">
@@ -413,32 +417,33 @@
                 <li class=" nav-item"><a href="index.html"><i><img src="./app-assets/images/gallery/menu-img-1.png" class="img-fluid" alt="" style="height: 20px;"></i><span class="menu-title" data-i18n="">Dashboard</span><span
                             class="badge badge badge-info badge-pill float-right mr-2">3</span></a>
                     <!--ul class="menu-content">
-                        <li><a class="menu-item" href="dashboard-ecommerce.html">eCommerce</a>
-                        </li>
-                        <li class="active"><a class="menu-item" href="dashboard-analytics.html">Analytics</a>
-                        </li>
-                    </ul-->
+                    <li><a class="menu-item" href="dashboard-ecommerce.html">eCommerce</a>
+                    </li>
+                    <li class="active"><a class="menu-item" href="dashboard-analytics.html">Analytics</a>
+                    </li>
+                </ul-->
                 </li>
-                <li class=" nav-item"><a href="#"><img src="./app-assets/images/gallery/RocketLaunch.png" class="img-fluid" alt="" style="margin-right: 20px; margin-left: -4
-                    px;"><span class="menu-title" data-i18n="">Setup
+                <li class=" nav-item"><a href="#"><img src="./app-assets/images/gallery/RocketLaunch.png" class="img-fluid" alt="" style="margin-right: 20px; margin-left: -4px;"><span class="menu-title" data-i18n="">Setup
                             Products</span></a>
                     <ul class="menu-content">
                         <li class=""><a class="menu-item" href="add_product.html">Add Products</a>
                         </li>
-                        <li><a class="menu-item" href="manage_product.html">Manage Products</a>
+                        <li class=""><a class="menu-item" href="manage_product.html">Manage Products</a>
                         </li>
-                        <li class="active"><a class="menu-item" href="upload_bulk_product.html">Bulk Products Upload</a>
+                        <li><a class="menu-item" href="upload_bulk_product.html">Bulk Products Upload</a>
                         </li>
                         <li><a class="menu-item" href="add_group.html">Add Group</a>
                         </li>
-                       
                         <li><a class="menu-item" href="manage-group.html">Manage Group</a>
                         </li>
-                       
+                        
+                        <li><a class="menu-item" href="upload_bulk_product.html">Bulk Products Upload</a>
                         </li>
+                        
+                      
                         <li><a class="menu-item" href="price-rule-manager.html">Add Pricing Rule</a>
                         </li>
-                        <li><a class="menu-item" href="manage-pricing-rule.html">Manage Pricing Rule</a>
+                        <li class="active"><a class="menu-item" href="manage-pricing-rule.html">Manage Pricing Rule</a>
                         </li>
                         <li class=""><a class="menu-item" href="Add-keyword-template.html">Add Keyword Template</a>
                         </li>
@@ -464,7 +469,7 @@
                         <li><a class="menu-item" href="Manage-upload-price-file.html">Manage Price File</a>
                         </li>
 
-                    </ul>                </li>
+                    </ul>
 
 
                 <li class=" nav-item"><a href="#"><img src="./app-assets/images/gallery/orders.png" class="img-fluid" style="margin-right: 20px;"><span class="menu-title"
@@ -534,110 +539,120 @@
         </div>
     </div>
     <!-- END: Main Menu-->
+
     <!-- BEGIN: Content-->
     <div class="app-content content">
         <div class="content-wrapper">
             <div class="content-wrapper-before"></div>
             <div class="content-header row">
                 <div class="content-header-left col-md-4 col-12 mb-2">
-                    <h3 class="content-header-title ">Upload Bulk Products</h3>
-                    <h4 class="content-title" style="color: darkgray !important;font-size: 20px;">Setup Product
-                        /Upload Bulk Product</h4>
+                    <h3 class="content-header-title">Manage Pricing Rules</h3>
+                    <h4 class="content-title" style="color: #8c8888;font-size: 20px;">Group
+                        / Manage Pricing Rules</h4>
                 </div>
-
+                <div class="content-header-right col-md-8 col-12">
+                    <div class="breadcrumbs-top float-md-right">
+                        <div class="breadcrumb-wrapper mr-1">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="index.html">Home</a>
+                                </li>
+                                <li class="breadcrumb-item"><a href="#">DataTables</a>
+                                </li>
+                                <li class="breadcrumb-item active">Sources Datatable
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="content-body">
-                <!-- Form wizard with icon tabs section start -->
-                <section id="icon-tabs">
+                <!-- HTML (DOM) sourced data -->
+                <section id="html">
                     <div class="row">
                         <div class="col-12">
                             <div class="card">
+                                <div class="py-4 px-3">
+                                    <button class="btn btn-primary btn-min-width box-shadow-1 mr-1 mb-1">New pricing Rule</button></div>
+                                
+                                
+                                <div class="card-content  collapse show">
+                                    <div class="card-body card-dashboard">
 
-                                <div class="card-content collapse show">
-                                    <div class="card-body">
-                                        <form class="md-form">
-                                            <div class="py-2">
-                                                <label class="form-label ml-2" for="customFile">Drop files here
-                                                    and click to upload</label>
-                                                <input type="file" id="logo" class="form-control" id="customFile"
-                                                    style="border: none; color: #999;" />
-                                            </div>
-                                            <!--fieldset>
-                                                <div class="dropzone dropzone-previews" id="my-awesome-dropzone">
-                                                    <div class="dz-default dz-message" style="top: 15%;">Drop files here
-                                                        and click to upload </div>
-                                                </div>
-                                            </fieldset-->
+                                        <div class="table-responsive">
+                                            <table class="table sourced-data table-borderless dataTable no-footer">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Applicable To</th>
+                                                        <th>Applicable On</th>
+                                                        <th>Marketplace</th>
+                                                        <th>Rule Type</th>
+                                                        <th>Rule Summary
+                                                            (P: Price /Q: Qty)</th>
+                                                        <th>Action</th>
+                                                       
 
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                       
+                                                        <td>725272730867</td>
+                                                        <td class="px-0">725272730867...</td>
+                                                        <td>--</td>
+                                                        <td>$32.99</td>
+                                                        <td>$00.0</td>
+                                                        
+                                                       
+                                                        <td class="text-right" style="font-size: 22px;"><span
+                                                                class="dropdown">
+                                                                <button id="btnSearchDrop12" type="button"
+                                                                    class="btn btn-sm btn-icon btn-pure font-medium-2"
+                                                                    data-toggle="dropdown" aria-haspopup="true"
+                                                                    aria-expanded="false">
+                                                                    <i class="ft-more-vertical"></i>
+                                                                </button>
+                                                                <span aria-labelledby="btnSearchDrop12"
+                                                                    class="dropdown-menu mt-1 dropdown-menu-right"
+                                                                    x-placement="top-end"
+                                                                    style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(-99px, -126px, 0px);">
+                                                                    <a href="#" class="dropdown-item">
+                                                                        <i class="ft-trash-2"></i> Edit Product</a>
+                                                                    <a href="#" class="dropdown-item">
+                                                                        <i class="ft-edit-2"></i> Delete Product</a>
 
-                                        </form>
-                                        <form action="">
-                                            <div class=" row text-left  py-2 px-3">
-                                                <div style="font-size: 16px; color: #999;" class="mt-2">Download
-                                                    Standalone Sample
-                                                    Products CSV File </div>
-                                                <a href="app-assets/images/gallery/Vector (4).png" download>
-                                                    <img src="app-assets/images/gallery/Vector (4).png" alt=""
-                                                        width="40" height="40" class="ml-3">
-                                                </a>
-                                            </div>
-                                        </form>
-                                        <form action="">
-                                            <div class=" row text-left  py-2 px-3">
-                                                <div style="font-size: 16px; color: #999;" class="mt-2">Sample Products
-                                                    CSV File Products CSV File</div>
-                                                <a href="app-assets/images/gallery/Vector (4).png" download>
-                                                    <img src="app-assets/images/gallery/Vector (4).png" alt=""
-                                                        width="40" height="40" class="ml-3">
-                                                </a>
-                                            </div>
+                                                                </span>
+                                                            </span></td>
+                                                    </tr>
+                                                   
+                                                   
+                                                </tbody>
+                                                <tfoot>
 
-                                        </form>
-                                        <form action="">
-                                            <div class=" row text-left  py-2 px-3">
-                                                <div style="font-size: 16px; color: #999;" class="mt-2">Download Sample
-                                                    Category CSV File</div>
-                                                <a href="app-assets/images/gallery/Vector (4).png" download>
-                                                    <img src="app-assets/images/gallery/Vector (4).png" alt=""
-                                                        width="40" height="40" class="ml-3">
-                                                </a>
-                                            </div>
-
-                                        </form>
-
-                                        </form>
-
+                                                </tfoot>
+                                            </table>
+                                        </div>
                                     </div>
-
-
                                 </div>
                             </div>
                         </div>
                     </div>
+                </section>
+               
+                   
+                </section>
+                <!--/ Javascript sourced data -->
             </div>
-
-            </section>
-            <!-- Form wizard with icon tabs section end -->
-
-
-
-
         </div>
-
     </div>
-
-    </div>
-
     <!-- END: Content-->
 
 
     <!-- BEGIN: Footer-->
-    <!--a class="btn btn-try-builder btn-bg-gradient-x-purple-red btn-glow white"
-        href="https://www.themeselection.com/layout-builder/horizontal" target="_blank">Try Layout Builder</a-->
+    <!--a class="btn btn-try-builder btn-bg-gradient-x-purple-red btn-glow white" href="https://www.themeselection.com/layout-builder/horizontal" target="_blank">Try Layout Builder</a-->
     <footer class="footer footer-static footer-light navbar-border navbar-shadow">
-        <div class="clearfix blue-grey lighten-2 text-sm-center mb-0 px-2"><span class="text-center text-white">@2021.
-                <a class="text-bold-800 grey darken-2" href="#" target="_blank"> DELIVIO CopyRight.</a></span>
-
+        <div class="clearfix blue-grey lighten-2 text-sm-center mb-0 px-2">
+            <span class="text-center text-white">@2021. <a class="text-bold-800 grey darken-2" href="#" target="_blank">
+                    DELIVIO CopyRight.</a></span>
         </div>
     </footer>
     <!-- END: Footer-->
@@ -646,40 +661,20 @@
     <!-- BEGIN: Vendor JS-->
     <script src="app-assets/vendors/js/vendors.min.js" type="text/javascript"></script>
     <!-- BEGIN Vendor JS-->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/4.0.1/dropzone.css" rel="stylesheet" />
-    <link rel="stylesheet" type="text/css" href="app-assets/css/plugins/file-uploaders/dropzone.css">
-    <!-- BEGIN: Page Vendor JS-->
-    <script src="app-assets/vendors/js/extensions/jquery.steps.min.js" type="text/javascript"></script>
-    <script src="app-assets/vendors/js/pickers/dateTime/moment-with-locales.min.js" type="text/javascript"></script>
-    <script src="app-assets/vendors/js/pickers/daterange/daterangepicker.js" type="text/javascript"></script>
-    <script src="app-assets/vendors/js/forms/validation/jquery.validate.min.js" type="text/javascript"></script>
-    <!-- END: Page Vendor JS-->
-    <!-- <script src="app-assets/vendors/js/extensions/dropzone.min.js" type="text/javascript"></script>
-   <script src="app-assets/js/scripts/extensions/dropzone.js" type="text/javascript"></script> -->
 
+    <!-- BEGIN: Page Vendor JS-->
+    <script src="app-assets/vendors/js/tables/datatable/datatables.min.js" type="text/javascript"></script>
+    <!-- END: Page Vendor JS-->
 
     <!-- BEGIN: Theme JS-->
     <script src="app-assets/js/core/app-menu.js" type="text/javascript"></script>
     <script src="app-assets/js/core/app.js" type="text/javascript"></script>
     <!-- END: Theme JS-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/4.0.1/dropzone.js"></script>
+
     <!-- BEGIN: Page JS-->
-    <script src="app-assets/js/scripts/forms/wizard-steps.js" type="text/javascript"></script>
-    <script src="app-assets/vendors/js/editors/ckeditor/ckeditor.js" type="text/javascript"></script>
+    <script src="app-assets/js/scripts/tables/datatables-extensions/datatables-sources.js"
+        type="text/javascript"></script>
     <!-- END: Page JS-->
-    <script src="app-assets/js/scripts/editors/editor-ckeditor.js" type="text/javascript"></script>
-    <script>
-        Dropzone.autoDiscover = false;
-        jQuery(document).ready(function () {
-
-            $("div#my-awesome-dropzone").dropzone({
-                url: "/file/post",
-                dictDefaultMessage: "Drop File Here Or Click To Upload"
-            });
-
-        });
-    </script>
-
 
 </body>
 <!-- END: Body-->

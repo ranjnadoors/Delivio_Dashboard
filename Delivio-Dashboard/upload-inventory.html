@@ -12,6 +12,9 @@
         content="admin template, Chameleon admin template, dashboard template, gradient admin template, responsive admin template, webapp, eCommerce dashboard, analytic dashboard">
     <meta name="author" content="ThemeSelect">
     <title></title>
+    <script>
+        $('img').removeAttr('title');
+    </script>
     <link rel="apple-touch-icon" href="app-assets/images/ico/apple-icon-120.png">
     <!--link rel="shortcut icon" type="image/x-icon" href="app-assets/images/ico/favicon.ico"-->
     <link
@@ -20,7 +23,8 @@
 
     <!-- BEGIN: Vendor CSS-->
     <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/vendors.min.css">
-    <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/pickers/daterange/daterangepicker.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/charts/chartist.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/charts/chartist-plugin-tooltip.css">
     <!-- END: Vendor CSS-->
 
     <!-- BEGIN: Theme CSS-->
@@ -33,8 +37,9 @@
     <!-- BEGIN: Page CSS-->
     <link rel="stylesheet" type="text/css" href="app-assets/css/core/menu/menu-types/vertical-menu.css">
     <link rel="stylesheet" type="text/css" href="app-assets/css/core/colors/palette-gradient.css">
-    <link rel="stylesheet" type="text/css" href="app-assets/css/plugins/forms/wizard.css">
-    <link rel="stylesheet" type="text/css" href="app-assets/css/plugins/pickers/daterange/daterange.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/css/core/colors/palette-gradient.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/css/pages/chat-application.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/css/pages/dashboard-analytics.css">
     <!-- END: Page CSS-->
 
     <!-- BEGIN: Custom CSS-->
@@ -44,11 +49,8 @@
 </head>
 <!-- END: Head-->
 
-<!-- BEGIN: Body-->
-
 <body class="vertical-layout vertical-menu 2-columns   fixed-navbar" data-open="click" data-menu="vertical-menu"
     data-color="bg-gradient-x-purple-blue" data-col="2-columns">
-
     <!-- BEGIN: Header-->
     <nav
         class="header-navbar navbar-expand-md navbar navbar-with-menu navbar-without-dd-arrow fixed-top navbar-semi-light">
@@ -414,7 +416,9 @@
         <div class="navigation-background"></div>
         <div class="main-menu-content">
             <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
-                <li class="nav-item"><a href="index.html"><i><img src="./app-assets/images/gallery/menu-img-1.png" class="img-fluid" alt="" style="height: 20px;"></i><span class="menu-title" data-i18n="">Dashboard</span><span
+                <li class=" nav-item "><a href="index.html"><i><img src="./app-assets/images/gallery/menu-img-1.png"
+                                alt="" style="height: 20px;"></i><span class="menu-title"
+                            data-i18n="">Dashboard</span><span
                             class="badge badge badge-info badge-pill float-right mr-2">3</span></a>
                     <!--ul class="menu-content">
                         <li><a class="menu-item" href="dashboard-ecommerce.html">eCommerce</a>
@@ -423,10 +427,12 @@
                         </li>
                     </ul-->
                 </li>
-                <li class=" nav-item"><a href="#"><img src="./app-assets/images/gallery/RocketLaunch.png" class="img-fluid" alt="" style="margin-right: 20px;  margin-left: -4px;"><span class="menu-title" data-i18n="">Setup
+                <li class=" nav-item"><a href="#"><img src="./app-assets/images/gallery/RocketLaunch.png"
+                            class="img-fluid" alt="" style="margin-right: 20px; margin-left: -4px;"><span
+                            class="menu-title" data-i18n="">Setup
                             Products</span></a>
                     <ul class="menu-content">
-                        <li class="active"><a class="menu-item" href="add_product.html">Add Products</a>
+                        <li class=""><a class="menu-item" href="add_product.html">Add Products</a>
                         </li>
                         <li><a class="menu-item" href="manage_product.html">Manage Products</a>
                         </li>
@@ -434,11 +440,9 @@
                         </li>
                         <li><a class="menu-item" href="add_group.html">Add Group</a>
                         </li>
-                        <li><a class="menu-item" href="upload_bulk_product.html">Bulk Products Upload</a>
-                        </li>
-                        
                         <li><a class="menu-item" href="manage-group.html">Manage Group</a>
                         </li>
+                      
                         <li><a class="menu-item" href="price-rule-manager.html">Add Pricing Rule</a>
                         </li>
                         <li><a class="menu-item" href="manage-pricing-rule.html">Manage Pricing Rule</a>
@@ -455,10 +459,10 @@
                             style="margin-right: 20px;"><span class="menu-title" data-i18n="">Inventory</span></a>
 
                     <ul class="menu-content">
-                        <li><a class="menu-item" href="view-inventory.html">View Inventory</a></li>
+                        <li class=""><a class="menu-item" href="view-inventory.html">View Inventory</a></li>
                         <li><a class="menu-item" href="view-inventory-by-warehouse.html">View Inventory by Warehouse</a>
                         </li>
-                        <li class=""><a class="menu-item" href="upload-inventory.html">Upload Inventory File</a>
+                        <li class="active"><a class="menu-item" href="upload-inventory.html">Upload Inventory File</a>
                         </li>
                         <li><a class="menu-item" href="manage-upload-inventory.html">Manage Inventory File</a>
                         </li>
@@ -471,8 +475,8 @@
                 </li>
 
 
-                <li class=" nav-item"><a href="#"><img src="./app-assets/images/gallery/orders.png" class="img-fluid" style="margin-right: 20px;"><span class="menu-title"
-                            data-i18n="">Orders</span><span
+                <li class=" nav-item"><a href="#"><img src="./app-assets/images/gallery/orders.png" class="img-fluid"
+                            style="margin-right: 20px;"><span class="menu-title" data-i18n="">Orders</span><span
                             class="badge badge badge-pill badge-danger float-right mr-2">5</span></a>
                     <ul class="menu-content">
                         <li><a class="menu-item" href="">Create Case Packed Outbound Package</a>
@@ -491,7 +495,8 @@
                         </li>
                     </ul>
                 </li>
-                <li class=" nav-item"><a href="#"><img src="./app-assets/images/gallery/marketplace.png" class="img-fluid" style="margin-right: 20px;"><span class="menu-title"
+                <li class=" nav-item"><a href="#"><img src="./app-assets/images/gallery/marketplace.png"
+                            class="img-fluid" style="margin-right: 20px;"></i><span class="menu-title"
                             data-i18n="">Marketplace</span></a>
 
                     <ul class="menu-content">
@@ -504,8 +509,8 @@
                 </li>
 
 
-                <li class=" nav-item"><a href="#"><img src="./app-assets/images/gallery/shipping.png" class="img-fluid" style="margin-right: 20px;"><span class="menu-title"
-                            data-i18n="">Shipping</span></a>
+                <li class=" nav-item"><a href="#"><img src="./app-assets/images/gallery/shipping.png" class="img-fluid"
+                            style="margin-right: 20px;"><span class="menu-title" data-i18n="">Shipping</span></a>
                     <ul class="menu-content">
 
                         <li><a class="menu-item" href="">Create Shipment</a>
@@ -520,10 +525,11 @@
                     </ul>
                 </li>
 
-                <li class=" nav-item"><a href="#"><img src="./app-assets/images/gallery/settings.png" class="img-fluid" style="margin-right: 20px;"><span class="menu-title" data-i18n="">Store
+                <li class=" nav-item"><a href="#"><img src="./app-assets/images/gallery/settings.png" class="img-fluid"
+                            style="margin-right: 20px;"><span class="menu-title" data-i18n="">Store
                             Settings</span></a>
                     <ul class="menu-content">
-                        <li><a class="menu-item" href="add_domain.html">Add Domain</a>
+                        <li class=""><a class="menu-item" href="add_domain.html">Add Domain</a>
                         </li>
                         <li><a class="menu-item" href="update_store_detail.html">Upload Store Detail</a>
                         </li>
@@ -538,191 +544,16 @@
         </div>
     </div>
     <!-- END: Main Menu-->
-
     <!-- BEGIN: Content-->
-    <div class="app-content content" id="without-variation">
-        <div class="content-wrapper">
-            <div class="content-wrapper-before"></div>
-            <div class="content-header row">
-
-
-            </div>
-            <div class="content-body">
-                <!-- Form wizard with icon tabs section start -->
-                <section id="icon-tabs">
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="card">
-                                <div class="card-header">
-                                    <div class="row">
-                                        <div class="col-lg-5">
-                                            <div class="content-header-left  col-12 mb-2 text-center">
-                                                <h3 class="content-header-title ">Get ready to sell online. Create new
-                                                    products.
-                                                </h3>
-                                            </div>
-                                            <div class="row  justify-content-center" id="add-product-img">
-                                                <div class="  text-lg-left text-center  col-md-6">
-                                                    <img src="./app-assets/images/gallery/withoutvariation-100.jpg"
-                                                        class="img-fluid add-product-img-1 zoomin" alt="">
-                                                    <h3 class="my-2 text-center">Without Variations</h3>
-                                                </div>
-
-                                                <div class=" text-lg-left text-center  col-md-6 mt-md-0 mt-3"
-                                                    id="open-add-product-field" onclick="myFunction()">
-                                                    <img src="./app-assets/images/gallery/withvariation-100.jpg"
-                                                        class="img-fluid add-product-img-1 zoomin" alt="">
-                                                    <h3 class="my-2 text-center">With Variations</h3>
-                                                </div>
-                                            </div>
-                                            <div class="row justify-content-center mt-2">
-                                                <div class="form-group  w-50" id="add-product-input-field"
-                                                    style="display: none;">
-                                                    <label for="location2" style="font-weight:bold;">Parent
-                                                        Category</label>
-                                                    <select class="custom-select form-control" id="select_item"
-                                                        name="location">
-                                                        <option value="">Select parent category</option>
-                                                        <option value="1">Home and Kitchen </option>
-                                                        <option value="2">Computers </option>
-                                                        <option value="3">Clothing </option>
-                                                        <option value="4">Sports </option>
-                                                        <option value="5">Others </option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                            <div class="row justify-content-center">
-                                                <div class="form-group w-50" id="home-kitchen-input-field"
-                                                    style="display: none;">
-                                                    <label for="location2" style="font-weight:bold;">Level 1
-                                                        Category</label>
-                                                    <select class="custom-select form-control" id="location2"
-                                                        name="location">
-                                                        <option value=""> Artwork </option>
-                                                        <option value="Amsterdam"> Home Decor </option>
-                                                        <option value="Berlin"> Bedding </option>
-                                                        <option value="Frankfurt"> Heating, Cooling & Air Quality
-                                                        </option>
-                                                        <option value="sports"> Iron & Steamers </option>
-                                                        <option value="others"> Furniture </option>
-                                                        <option value="others"> Bath Rugs </option>
-                                                        <option value="others"> Bath Towels </option>
-                                                        <option value="others"> Kitchen & Dinning </option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                            <div class="row justify-content-center my-md-4 my-3" id="add-btn">
-                                                <a href="add-product-1.html"><button
-                                                        class="btn btn-info btn-min-width box-shadow-3 mr-1 mb-1"
-                                                        data-toggle="modal" data-keyboard="false"
-                                                        data-target="#keyboard1">Ok</button></a>
-
-
-                                                <div class="form-group">
-
-                                                    <!-- Button trigger modal -->
-                                                    <button type="button"
-                                                        class="btn btn-info btn-min-width box-shadow-3 mr-1 mb-1"
-                                                        data-toggle="modal" data-keyboard="false"
-                                                        data-target="#keyboard1">
-                                                        Cancel
-                                                    </button>
-
-                                                    <!-- Modal -->
-                                                    <div class="modal fade text-left" id="keyboard1" tabindex="-1"
-                                                        role="dialog" aria-labelledby="basicModalLabel3"
-                                                        aria-hidden="true">
-                                                        <div class="modal-dialog modal-dialog-centered" role="document">
-                                                            <div class="modal-content">
-                                                                <div class="modal-header">
-                                                                    <h4 class="modal-title" id="basicModalLabel3">Basic
-                                                                        Modal
-                                                                    </h4>
-                                                                    <button type="button" class="close"
-                                                                        data-dismiss="modal" aria-label="Close">
-                                                                        <span aria-hidden="true">&times;</span>
-                                                                    </button>
-                                                                </div>
-                                                                <div class="modal-body">
-                                                                    <p>Cras mattis consectetur purus sit amet fermentum.
-                                                                        Cras
-                                                                        justo odio, dapibus ac facilisis in, egestas
-                                                                        eget quam.
-                                                                        Morbi leo risus, porta ac consectetur ac,
-                                                                        vestibulum at
-                                                                        eros.</p>
-                                                                </div>
-                                                                <div class="modal-footer">
-                                                                    <button type="button" class="btn grey btn-secondary"
-                                                                        data-dismiss="modal">Close</button>
-                                                                    <button type="button"
-                                                                        class="btn btn-danger">Save</button>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-
-                                            </div>
-                                            <a class="heading-elements-toggle"><i
-                                                    class="la la-ellipsis-h font-medium-3"></i></a>
-                                        </div>
-                                        <div class="col-lg-1 d-flex flex-column   mb-lg-0 mb-3"
-                                            style="align-items: center;">
-                                            <div class="d-lg-flex d-lg-block d-none"
-                                                style="border: 1px solid; height: 200px;"></div>
-                                            <div class="row my-2 pt-1">
-                                                <h1>OR</h1>
-                                            </div>
-                                            <div class="d-lg-flex d-lg-block d-none"
-                                                style="border: 1px solid; height: 200px;"></div>
-                                        </div>
-                                        <div class="col-lg-6">
-                                            <div class="text-center ">
-                                                <h3 class="content-header-title ">ADD MARKETPLACE</h3>
-                                            </div>
-                                            <div class="row" id="add-marketplace">
-                                                <div class="col mt-3 text-center" width="164px" height="124px"><img
-                                                        src="./app-assets/images/gallery/amazon.jpg" class="" alt=""
-                                                        width="164px" height="124px"></div>
-                                                <div class="col  mt-3 text-center" width="164px" height="124px"><img
-                                                        src="./app-assets/images/gallery/etsy.jpg" class="" alt=""
-                                                        width="164px" height="124px"></div>
-                                                <div class="col  mt-3 text-center" width="164px" height="124px"><img
-                                                        src="./app-assets/images/gallery/jet.jpg" class="" alt=""
-                                                        width="164px" height="124px"></div>
-                                                <div class="col  mt-3 text-center" width="164px" height="124px"><img
-                                                        src="./app-assets/images/gallery/shopify.jpg" class="" alt=""
-                                                        width="164px" height="124px"></div>
-                                                <div class="col  mt-3 text-center" width="164px" height="124px"><img
-                                                        src="./app-assets/images/gallery/Walmart.jpg" class="" alt=""
-                                                        width="164px" height="124px"></div>
-                                            </div>
-                                            <p class="mt-4 mx-md-3">You have not added any marketplace please <a href=""
-                                                    style="color:  #3F69AA; font-weight: 600;">CLICK HERE </a>
-                                                or on <span style="font-weight: bold; color:  #3F69AA;">MARKETPLACE ICON
-                                                </span>
-                                                to pull products from marketplace.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                </section>
-            </div>
-        </div>
-    </div>
-    <div class="app-content content d-none">
+    <div class="app-content content">
         <div class="content-wrapper">
             <div class="content-wrapper-before"></div>
             <div class="content-header row">
                 <div class="content-header-left col-md-4 col-12 mb-2">
-                    <h3 class="content-header-title ">Add Products</h3>
-                    <h4 class="content-title" style="color: #8c8888;font-size: 20px;">Setup Products
-                        /Add Products</h4>
+                    <h3 class="content-header-title">Upload Inventory File</h3>
+                    <h4 class="content-title" style="color: #8c8888;font-size: 20px;">Inventory
+                        / Upload Inventory File</h4>
                 </div>
-
             </div>
             <div class="content-body">
                 <!-- Form wizard with icon tabs section start -->
@@ -746,319 +577,539 @@
                                 <div class="card-content collapse show">
                                     <div class="card-body">
                                         <form action="#" class="icons-tab-steps">
-
-                                            <!-- Step 1 -->
-                                            <h6><i class="step-icon ft-home"></i>Vital Step</h6>
                                             <fieldset>
                                                 <div class="row">
-                                                    <div class="col-md-6">
+                                                    <div class="col-md-5 pr-0">
                                                         <div class="form-group">
-                                                            <label for="firstName2">Product Title</label>
+                                                            <label for="firstName2">File Input</label>
                                                             <input type="text" class="form-control" id="firstName2">
                                                         </div>
                                                     </div>
-
-                                                    <div class="col-md-6">
-                                                        <div class="form-group">
-                                                            <label for="lastName2">SKU</label>
-                                                            <input type="text" class="form-control" id="lastName2">
-                                                        </div>
-                                                    </div>
+                                                    <div class="col-4 my-2 pl-0">
+                                                        <button class=" px-2 py-1 domain-btn">Browse</button></div>
                                                 </div>
-
-                                                <div class="row">
-                                                    <div class="col-md-6">
-                                                        <div class="form-group">
-                                                            <label for="emailAddress3">Manufacturer</label>
-                                                            <input type="email" class="form-control" id="emailAddress3">
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="col-md-6">
-                                                        <div class="form-group">
-                                                            <label for="location2">Conditions</label>
-                                                            <select class="custom-select form-control" id="location2"
-                                                                name="location">
-                                                                <option value="">Select City</option>
-                                                                <option value="Amsterdam">Amsterdam</option>
-                                                                <option value="Berlin">Berlin</option>
-                                                                <option value="Frankfurt">Frankfurt</option>
-                                                            </select>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="row">
-                                                    <div class="col-md-6">
-                                                        <div class="form-group">
-                                                            <label for="phoneNumber2">Brand</label>
-                                                            <input type="tel" class="form-control" id="phoneNumber2">
-                                                        </div>
-                                                    </div>
-
-
-                                                </div>
-                                            </fieldset>
-
-                                            <!-- Step 2 -->
-                                            <h6><i class="step-icon ft-file-text"></i>Keyword</h6>
-                                            <fieldset>
-                                                <div class="row">
-                                                    <div class="col-12 my-4">
-                                                        <div class="form-group ">
-                                                            <label for="proposalTitle2">Keyword template</label>
-                                                            <input type="text" class="form-control" id="proposalTitle2">
-                                                        </div>
-
-                                                    </div>
-
-                                                </div>
-                                            </fieldset>
-
-                                            <!-- Step 3 -->
-                                            <h6><i class="step-icon ft-activity"></i>Variation</h6>
-                                            <fieldset>
-                                                <div class="row">
-                                                    <div class="col-12 my-4">
-                                                        <div class="form-group ">
-                                                            <label for="proposalTitle2">Template variations</label>
-                                                            <input type="text" class="form-control" id="proposalTitle2">
-                                                        </div>
-
-                                                    </div>
-                                                </div>
-                                            </fieldset>
-
-                                            <!-- Step 4 -->
-                                            <h6><i class="step-icon ft-box"></i>Description</h6>
-
-                                            <fieldset>
-                                                <textarea name="ckeditor" id="ckeditor"></textarea>
-                                                <div class="row py-4">
-                                                    <div class="col-md-6">
-                                                        <div class="form-group">
-                                                            <label for="meetingName2">Bullet point 1</label>
-                                                            <input type="text" class="form-control" id="meetingName2">
-                                                        </div>
-
-                                                        <div class="form-group">
-                                                            <label for="meetingLocation2">Bullet point 3</label>
-                                                            <input type="text" class="form-control"
-                                                                id="meetingLocation2">
-                                                        </div>
-
-                                                        <div class="form-group">
-                                                            <label for="participants2">Bullet point 5</label>
-                                                            <input type="text" class="form-control" id="meetingName2">
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="col-md-6">
-                                                        <div class="form-group">
-                                                            <label for="meetingName2">Bullet point 2</label>
-                                                            <input type="text" class="form-control" id="meetingName2">
-                                                        </div>
-
-                                                        <div class="form-group">
-                                                            <label for="meetingLocation2">Bullet point 4</label>
-                                                            <input type="text" class="form-control"
-                                                                id="meetingLocation2">
-                                                        </div>
-
-                                                    </div>
-                                                </div>
-                                            </fieldset>
-                                            <!-- Step 5 -->
-                                            <h6><i class="step-icon ft-activity"></i>Data</h6>
-                                            <fieldset>
-                                                <div class="row">
-                                                    <div class="col-12 ">
-                                                        <div class="form-group "> <label
-                                                                for="proposalTitle2">Model</label>
-                                                            <input type="text" class="form-control" id="proposalTitle2">
-                                                        </div>
-
-                                                    </div>
-                                                    <div class="col-12 ">
-                                                        <div class="form-group "> <label for="proposalTitle2">Minimum
-                                                                Quantity</label>
-                                                            <input type="text" class="form-control" id="proposalTitle2">
-                                                        </div>
-
-                                                    </div>
-                                                </div>
-                                            </fieldset>
-                                            <!-- Step 6 -->
-                                            <h6><i class="step-icon ft-activity"></i>Dimensions</h6>
-                                            <fieldset>
-                                                <div class="form-group row ">
-                                                    <div class="col-12">
-                                                        <label for="proposalTitle2">Dimensions (L x W x
-                                                            H)</label></div>
-                                                    <div class="col-md-4">
-                                                        <input type="text" class="form-control" id="Lenth"
-                                                            placeholder="Length">
-                                                    </div>
-                                                    <div class="col-md-4">
-
-                                                        <input type="text" class="form-control" id="Width"
-                                                            placeholder="Width">
-
-                                                    </div>
-                                                    <div class="col-md-4">
-
-                                                        <input type="text" class="form-control" id="Height"
-                                                            placeholder="Height">
-
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-12">
-                                                        <div class="form-group ">
-                                                            <label for="proposalTitle2">Item Weight</label>
-                                                            <input type="text" class="form-control" id="proposalTitle2">
-                                                        </div>
-
-                                                    </div>
-                                                </div>
-
-
-                                                <div class="form-group row ">
-                                                    <div class="col-12">
-                                                        <label for="proposalTitle2">Pack Dimensions (L x W x
-                                                            H)</label></div>
-                                                    <div class="col-md-4">
-                                                        <input type="text" class="form-control" id="Lenth"
-                                                            placeholder="Length">
-                                                    </div>
-                                                    <div class="col-md-4">
-
-                                                        <input type="text" class="form-control" id="Width"
-                                                            placeholder="Width">
-
-                                                    </div>
-                                                    <div class="col-md-4">
-
-                                                        <input type="text" class="form-control" id="Height"
-                                                            placeholder="Height">
-
-                                                    </div>
-                                                </div>
-                                                <div class="form-group row ">
-                                                    <div class="col-12">
-                                                        <label for="proposalTitle2">Package Weight</label></div>
-                                                    <div class="col-md-6">
-                                                        <input type="text" class="form-control" id="Lenth"
-                                                            placeholder="Length">
-                                                    </div>
-                                                    <div class="col-md-6">
-
-                                                        <input type="text" class="form-control" id="Width"
-                                                            placeholder="Width">
-
-                                                    </div>
-
-                                                </div>
-                                                <div class="form-group row ">
-                                                    <div class="col-12">
-                                                        <label for="proposalTitle2">Carton Dimensions (L x W x
-                                                            H)</label></div>
-                                                    <div class="col-md-4">
-                                                        <input type="text" class="form-control" id="Lenth"
-                                                            placeholder="Length">
-                                                    </div>
-                                                    <div class="col-md-4">
-
-                                                        <input type="text" class="form-control" id="Width"
-                                                            placeholder="Width">
-
-                                                    </div>
-                                                    <div class="col-md-4">
-
-                                                        <input type="text" class="form-control" id="Height"
-                                                            placeholder="Height">
-
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-12 ">
-                                                        <div class="form-group ">
-                                                            <label for="proposalTitle2">Unit Per Carton
+                                                <div class="d-flex">
+                                                    <div class="form-group mr-3">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                id="gridCheck" style="height: 24px;width: 19px;">
+                                                            <label class="form-check-label ml-2" for="gridCheck"
+                                                                style="font-size: 20px;">
+                                                                Amazon Inventory
                                                             </label>
-                                                            <input type="text" class="form-control" id="proposalTitle2">
                                                         </div>
-
                                                     </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-12 ">
-                                                        <div class="form-group ">
-                                                            <label for="proposalTitle2">Carton Volume
+                                                    <div class="form-group mx-3">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                id="gridCheck" style="height: 24px;width: 19px;">
+                                                            <label class="form-check-label ml-2" for="gridCheck"
+                                                                style="font-size: 20px;">
+                                                                Shopify Inventory
                                                             </label>
-                                                            <input type="text" class="form-control" id="proposalTitle2">
                                                         </div>
-
                                                     </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-12">
-                                                        <div class="form-group ">
-                                                            <label for="proposalTitle2">Shipping Price
+                                                    <div class="form-group mx-3">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                id="gridCheck" style="height: 24px;width: 19px;">
+                                                            <label class="form-check-label ml-2" for="gridCheck"
+                                                                style="font-size: 20px;">
+                                                                Walmart Inventory
                                                             </label>
-                                                            <input type="text" class="form-control" id="proposalTitle2">
                                                         </div>
-
                                                     </div>
+
                                                 </div>
-                                                <div class="row">
-                                                    <div class="col-12">
-                                                        <div class="form-group ">
-                                                            <label for="proposalTitle2">Shipping Price Type
-                                                            </label>
-                                                            <input type="text" class="form-control" id="proposalTitle2">
-                                                        </div>
 
-                                                    </div>
-                                                </div>
-                                            </fieldset>
-                                            <!-- Step 7 -->
-                                            <h6><i class="step-icon ft-activity"></i>Gallery</h6>
-
-                                            <fieldset>
-
-
-                                                <!-- <form action="#" class="dropzone dropzone-area" id="dpz-single-file">
-                                                    <div class="dz-message">Drop File Here Or Click To Upload</div>
-                                                </form> -->
-                                                <div class="dropzone dropzone-previews" id="my-awesome-dropzone"></div>
-                                                <!-- <form action="#" class="dropzone dropzone-area" id="dpz-single-file">
-                                                    <div class="dz-message">Drop File Here Or Click To Upload</div>
-                                                </form> -->
-                                                <div class="row py-4">
-
-                                                    <div class="col-12 ">
-                                                        <div class="form-group ">
-                                                            <label for="proposalTitle2">Product Video</label>
-                                                            <input type="text" class="form-control" id="proposalTitle2">
-                                                        </div>
-
-                                                    </div>
-                                                </div>
                                             </fieldset>
                                         </form>
+                                    </div>
+
+                                    <div class="row ml-4">
+                                        <div class="col-md-4">
+                                            <div class="my-1">
+                                                <a href="#"><button type="submit"
+                                                        class="px-2 py-1 domain-btn">CANCEL</button></a>
+                                                <a href="#"><button type="button"
+                                                        class="mx-4 px-2 py-1 domain-btn">Upload</button></a>
+                                            </div>
+
+                                        </div>
+
 
                                     </div>
+                                    <div class="mt-5 mx-4">
+                                        <h4>Inventory CSV File</h4>
+                                        <div class="text-center my-4 py-4" style="background-color: rgba(244, 245, 250, 0.7);">
+                                            <h4>Download Standalone Sample Products CSV File </h4>
+                                            <img src="app-assets/images/gallery/Vector (4).png" class="img-fluid" alt="">
+                                        </div>
+                                    </div>
+                                    </form>
+
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+
+        </section>
+        <!-- Form wizard with icon tabs section end -->
+
+        <!-- Form wizard with step validation section start -->
+        <!--section id="validation">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title">Validation Example</h4>
+                                <a class="heading-elements-toggle"><i class="la la-ellipsis-h font-medium-3"></i></a>
+                                <div class="heading-elements">
+                                    <ul class="list-inline mb-0">
+                                        <li><a data-action="collapse"><i class="ft-minus"></i></a></li>
+                                        <li><a data-action="reload"><i class="ft-rotate-cw"></i></a></li>
+                                        <li><a data-action="expand"><i class="ft-maximize"></i></a></li>
+                                        <li><a data-action="close"><i class="ft-x"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card-content collapse show">
+                                <div class="card-body">
+                                    <form action="#" class="steps-validation">
+
+                                        <!-- Step 1 >
+                                        <h6>Step 1</h6>
+                                        <fieldset>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="firstName3">
+                                                            Employee Name :
+                                                            <span class="danger">*</span>
+                                                        </label>
+                                                        <input type="text" class="form-control required" id="firstName3" name="firstName">
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="lastName3">
+                                                            Project Name :
+                                                            <span class="danger">*</span>
+                                                        </label>
+                                                        <input type="text" class="form-control required" id="lastName3" name="lastName">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="emailAddress5">
+                                                            Email
+                                                            <span class="danger">*</span>
+                                                        </label>
+                                                        <input type="email" class="form-control required" id="emailAddress5" name="emailAddress">
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="location">
+                                                            Project Location :
+                                                            <span class="danger">*</span>
+                                                        </label>
+                                                        <select class="custom-select form-control required" id="location" name="location">
+                                                            <option value="">Select City</option>
+                                                            <option value="Amsterdam">Amsterdam</option>
+                                                            <option value="Berlin">Berlin</option>
+                                                            <option value="Frankfurt">Frankfurt</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="phoneNumber3">Contact Number :</label>
+                                                        <input type="tel" class="form-control" id="phoneNumber3">
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="date3">Date Started :</label>
+                                                        <input type="date" class="form-control" id="date3">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </fieldset>
+
+                                        <!-- Step 2>
+                                        <h6>Step 2</h6>
+                                        <fieldset>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="proposalTitle3">
+                                                            Proposal Title :
+                                                            <span class="danger">*</span>
+                                                        </label>
+                                                        <input type="text" class="form-control required" id="proposalTitle3" name="proposalTitle">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="emailAddress6">
+                                                            Email
+                                                            <span class="danger">*</span>
+                                                        </label>
+                                                        <input type="email" class="form-control required" id="emailAddress6" name="emailAddress">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="videoUrl3">Video URL :</label>
+                                                        <input type="url" class="form-control" id="videoUrl3" name="videoUrl">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="jobTitle5">
+                                                            Job Title :
+                                                            <span class="danger">*</span>
+                                                        </label>
+                                                        <input type="text" class="form-control required" id="jobTitle5" name="jobTitle">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="shortDescription3">Short Description :</label>
+                                                        <textarea name="shortDescription" id="shortDescription3" rows="4" class="form-control"></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </fieldset>
+
+                                        <!-- Step 3 >
+                                        <h6>Step 3</h6>
+                                        <fieldset>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="eventName3">
+                                                            Event Name :
+                                                            <span class="danger">*</span>
+                                                        </label>
+                                                        <input type="text" class="form-control required" id="eventName3" name="eventName">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="eventType3">
+                                                            Event Type :
+                                                            <span class="danger">*</span>
+                                                        </label>
+                                                        <select class="custom-select form-control required" id="eventType3" name="eventType">
+                                                            <option value="Banquet">Banquet</option>
+                                                            <option value="Fund Raiser">Fund Raiser</option>
+                                                            <option value="Dinner Party">Dinner Party</option>
+                                                            <option value="Wedding">Wedding</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="eventLocation3">Event Location :</label>
+                                                        <select class="custom-select form-control" id="eventLocation3" name="eventLocation">
+                                                            <option value="">Select City</option>
+                                                            <option value="Amsterdam">Amsterdam</option>
+                                                            <option value="Berlin">Berlin</option>
+                                                            <option value="Frankfurt">Frankfurt</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="eventDate">
+                                                            Event Date - Time :
+                                                            <span class="danger">*</span>
+                                                        </label>
+                                                        <div class='input-group'>
+                                                            <input type='text' class="form-control datetime required" id="eventDate" name="eventDate" />
+                                                            <span class="input-group-addon">
+                                                                <span class="ft-calendar"></span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="eventStatus3">
+                                                            Event Status :
+                                                            <span class="danger">*</span>
+                                                        </label>
+                                                        <select class="custom-select form-control required" id="eventStatus3" name="eventStatus">
+                                                            <option value="Planning">Planning</option>
+                                                            <option value="In Progress">In Progress</option>
+                                                            <option value="Finished">Finished</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label>Requirements :</label>
+                                                        <div class="c-inputs-stacked">
+                                                            <div class="d-inline-block custom-control custom-checkbox">
+                                                                <input type="checkbox" name="status3" class="custom-control-input" id="staffing3">
+                                                                <label class="custom-control-label" for="staffing3">Staffing</label>
+                                                            </div>
+                                                            <div class="d-inline-block custom-control custom-checkbox">
+                                                                <input type="checkbox" name="status3" class="custom-control-input" id="catering3">
+                                                                <label class="custom-control-label" for="catering3">Catering</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </fieldset>
+
+                                        <!-- Step 4>
+                                        <h6>Step 4</h6>
+                                        <fieldset>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="meetingName3">
+                                                            Name of Meeting :
+                                                            <span class="danger">*</span>
+                                                        </label>
+                                                        <input type="text" class="form-control required" id="meetingName3" name="meetingName">
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <label for="meetingLocation3">
+                                                            Location :
+                                                            <span class="danger">*</span>
+                                                        </label>
+                                                        <input type="text" class="form-control required" id="meetingLocation3" name="meetingLocation">
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <label for="participants3">Names of Participants</label>
+                                                        <textarea name="participants" id="participants3" rows="4" class="form-control"></textarea>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="decisions3">Decisions Reached</label>
+                                                        <textarea name="decisions" id="decisions3" rows="4" class="form-control"></textarea>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label>Agenda Items :</label>
+                                                        <div class="c-inputs-stacked">
+                                                            <div class="custom-control custom-checkbox">
+                                                                <input type="checkbox" name="agenda3" class="custom-control-input" id="item31">
+                                                                <label class="custom-control-label" for="item31">1st item</label>
+                                                            </div>
+                                                            <div class="custom-control custom-checkbox">
+                                                                <input type="checkbox" name="agenda3" class="custom-control-input" id="item32">
+                                                                <label class="custom-control-label" for="item32">2nd item</label>
+                                                            </div>
+                                                            <div class="custom-control custom-checkbox">
+                                                                <input type="checkbox" name="agenda3" class="custom-control-input" id="item33">
+                                                                <label class="custom-control-label" for="item33">3rd item</label>
+                                                            </div>
+                                                            <div class="custom-control custom-checkbox">
+                                                                <input type="checkbox" name="agenda3" class="custom-control-input" id="item34">
+                                                                <label class="custom-control-label" for="item34">4th item</label>
+                                                            </div>
+                                                            <div class="custom-control custom-checkbox">
+                                                                <input type="checkbox" name="agenda3" class="custom-control-input" id="item35">
+                                                                <label class="custom-control-label" for="item35">5th item</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </fieldset>
+                                    </form>
                                 </div>
                             </div>
                         </div>
                     </div>
+                </div>
+            </section-->
+        <!-- Form wizard with step validation section end -->
 
-                </section>
+        <!-- Form wizard with vertical tabs section start -->
+        <!--section id="vertical-tabs">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title">Form wizard with vertical tabs</h4>
+                                <a class="heading-elements-toggle"><i class="la la-ellipsis-h font-medium-3"></i></a>
+                                <div class="heading-elements">
+                                    <ul class="list-inline mb-0">
+                                        <li><a data-action="collapse"><i class="ft-minus"></i></a></li>
+                                        <li><a data-action="reload"><i class="ft-rotate-cw"></i></a></li>
+                                        <li><a data-action="expand"><i class="ft-maximize"></i></a></li>
+                                        <li><a data-action="close"><i class="ft-x"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card-content collapse show">
+                                <div class="card-body">
+                                    <form action="#" class="vertical-tab-steps">
 
+                                        <!-- Step 1>
+                                        <h6>Step 1</h6>
+                                        <fieldset>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="firstName4">Employee Name :</label>
+                                                        <input type="text" class="form-control" id="firstName4">
+                                                    </div>
+                                                </div>
 
-            </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="lastName4">Project Name :</label>
+                                                        <input type="text" class="form-control" id="lastName4">
+                                                    </div>
+                                                </div>
+                                            </div>
 
-        </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="emailAddress7">Email</label>
+                                                        <input type="email" class="form-control" id="emailAddress7">
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="location3">Project Location :</label>
+                                                        <select class="custom-select form-control" id="location3" name="location">
+                                                            <option value="">Select City</option>
+                                                            <option value="Amsterdam">Amsterdam</option>
+                                                            <option value="Berlin">Berlin</option>
+                                                            <option value="Frankfurt">Frankfurt</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="phoneNumber4">Contact Number :</label>
+                                                        <input type="tel" class="form-control" id="phoneNumber4">
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="date4">Date Started :</label>
+                                                        <input type="date" class="form-control" id="date4">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </fieldset>
+
+                                        < Step 2 >
+                                        <h6>Step 2</h6>
+                                        <fieldset>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="proposalTitle4">Proposal Title :</label>
+                                                        <input type="text" class="form-control" id="proposalTitle4">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="emailAddress8">Email</label>
+                                                        <input type="email" class="form-control" id="emailAddress8">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="videoUrl4">Video URL :</label>
+                                                        <input type="url" class="form-control" id="videoUrl4">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="jobTitle6">Job Title :</label>
+                                                        <input type="text" class="form-control" id="jobTitle6">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="shortDescription4">Short Description :</label>
+                                                        <textarea name="shortDescription" id="shortDescription4" rows="4" class="form-control"></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </fieldset>
+
+                                        < Step 3 >
+                                        <h6>Step 3</h6>
+                                        <fieldset>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="meetingName4">Name of Meeting :</label>
+                                                        <input type="text" class="form-control" id="meetingName4">
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <label for="meetingLocation4">Location :</label>
+                                                        <input type="text" class="form-control" id="meetingLocation4">
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <label for="participants4">Names of Participants</label>
+                                                        <textarea name="participants" id="participants4" rows="4" class="form-control"></textarea>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="decisions4">Decisions Reached</label>
+                                                        <textarea name="decisions" id="decisions4" rows="4" class="form-control"></textarea>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label>Agenda Items :</label>
+                                                        <div class="c-inputs-stacked">
+                                                            <div class="custom-control custom-checkbox">
+                                                                <input type="checkbox" name="agenda4" class="custom-control-input" id="item41">
+                                                                <label class="custom-control-label" for="item41">1st item</label>
+                                                            </div>
+                                                            <div class="custom-control custom-checkbox">
+                                                                <input type="checkbox" name="agenda4" class="custom-control-input" id="item42">
+                                                                <label class="custom-control-label" for="item42">2nd item</label>
+                                                            </div>
+                                                            <div class="custom-control custom-checkbox">
+                                                                <input type="checkbox" name="agenda4" class="custom-control-input" id="item43">
+                                                                <label class="custom-control-label" for="item43">3rd item</label>
+                                                            </div>
+                                                            <div class="custom-control custom-checkbox">
+                                                                <input type="checkbox" name="agenda4" class="custom-control-input" id="item44">
+                                                                <label class="custom-control-label" for="item44">4th item</label>
+                                                            </div>
+                                                            <div class="custom-control custom-checkbox">
+                                                                <input type="checkbox" name="agenda4" class="custom-control-input" id="item45">
+                                                                <label class="custom-control-label" for="item45">5th item</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </fieldset>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section-->
+        <!-- Form wizard with vertical tabs section end -->
+
+    </div>
+
+    </div>
 
     </div>
 
@@ -1077,65 +1128,23 @@
     <!-- END: Footer-->
 
 
-
     <!-- BEGIN: Vendor JS-->
     <script src="app-assets/vendors/js/vendors.min.js" type="text/javascript"></script>
     <!-- BEGIN Vendor JS-->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/4.0.1/dropzone.css" rel="stylesheet" />
-    <link rel="stylesheet" type="text/css" href="app-assets/css/plugins/file-uploaders/dropzone.css">
-    <!-- BEGIN: Page Vendor JS-->
-    <script src="app-assets/vendors/js/extensions/jquery.steps.min.js" type="text/javascript"></script>
-    <script src="app-assets/vendors/js/pickers/dateTime/moment-with-locales.min.js" type="text/javascript"></script>
-    <script src="app-assets/vendors/js/pickers/daterange/daterangepicker.js" type="text/javascript"></script>
-    <script src="app-assets/vendors/js/forms/validation/jquery.validate.min.js" type="text/javascript"></script>
-    <!-- END: Page Vendor JS-->
-    <!-- <script src="app-assets/vendors/js/extensions/dropzone.min.js" type="text/javascript"></script>
-    <script src="app-assets/js/scripts/extensions/dropzone.js" type="text/javascript"></script> -->
 
+    <!-- BEGIN: Page Vendor JS-->
+    <script src="app-assets/vendors/js/charts/chartist.min.js" type="text/javascript"></script>
+    <script src="app-assets/vendors/js/charts/chartist-plugin-tooltip.min.js" type="text/javascript"></script>
+    <!-- END: Page Vendor JS-->
 
     <!-- BEGIN: Theme JS-->
     <script src="app-assets/js/core/app-menu.js" type="text/javascript"></script>
     <script src="app-assets/js/core/app.js" type="text/javascript"></script>
     <!-- END: Theme JS-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/4.0.1/dropzone.js"></script>
+
     <!-- BEGIN: Page JS-->
-    <script src="app-assets/js/scripts/forms/wizard-steps.js" type="text/javascript"></script>
-    <script src="app-assets/vendors/js/editors/ckeditor/ckeditor.js" type="text/javascript"></script>
+    <script src="app-assets/js/scripts/pages/dashboard-analytics.js" type="text/javascript"></script>
     <!-- END: Page JS-->
-    <script src="app-assets/js/scripts/editors/editor-ckeditor.js" type="text/javascript"></script>
-    <!-- BEGIN: Page JS-->
-    <script src="app-assets/js/scripts/forms/select/form-select2.js" type="text/javascript"></script>
-    <script src="app-assets/js/scripts/modal/components-modal.js" type="text/javascript"></script>
-    <!-- END: Page JS-->
-    <script>
-        Dropzone.autoDiscover = false;
-        jQuery(document).ready(function () {
-
-            $("div#my-awesome-dropzone").dropzone({
-                url: "/file/post",
-                dictDefaultMessage: "Drop File Here Or Click To Upload"
-            });
-
-        });
-    </script>
-    <script>
-        function myFunction() {
-            var x = document.getElementById("add-product-input-field");
-            if (x.style.display === "none") {
-                x.style.display = "block";
-            } else {
-                x.style.display = "none";
-            }
-        }
-    </script>
-
-
-    <script>
-        document.getElementById('select_item').addEventListener('change', function () {
-            var style = this.value == 1 ? 'block' : 'none';
-            document.getElementById('home-kitchen-input-field').style.display = style;
-        });
-    </script>
 
 </body>
 <!-- END: Body-->

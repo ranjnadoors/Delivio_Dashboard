@@ -3779,3 +3779,6 @@ border-radius: 5px;
 #hidden_div, #hidden_div1, #hidden_div2, #hidden_div3, #hidden_div4, #hidden_div5, #hidden_div6, #hidden_div7  {
 display: none;
 }
+#pricing-rule-manager li a{
+  color: black;
+}
